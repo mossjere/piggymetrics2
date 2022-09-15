@@ -2,10 +2,12 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/shared
-  profiles:
-     active: native
+        git:
+          uri: https://github.com/yzhangweber/cloudconfig-piggymetricsweber.git
+          search-paths:
+            - config*
+  #profiles:
+  #   active: native
   security:
     user:
       password: ${CONFIG_SERVICE_PASSWORD}
