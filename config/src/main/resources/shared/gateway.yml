@@ -41,5 +41,11 @@ zuul:
         stripPrefix: false
         sensitiveHeaders:
 
+    customer-service:
+      path: /customers/**
+      serviceId: customer-service
+      stripPrefix: false
+      sensitiveHeaders:
+
 server:
   port: 4000
